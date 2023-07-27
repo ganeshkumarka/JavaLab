@@ -41,6 +41,7 @@ public class StudentGradeManagementSystem extends javax.swing.JFrame {
         btn_findAverageSprcificStudent = new javax.swing.JButton();
         btn_findAverageEntireClass = new javax.swing.JButton();
         btn_clearData = new javax.swing.JButton();
+        display = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,50 +69,62 @@ public class StudentGradeManagementSystem extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(btn_displayGrades)
-                .addGap(45, 45, 45)
-                .addComponent(btn_findAverageSprcificStudent)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(btn_findAverageEntireClass)
-                .addGap(65, 65, 65)
-                .addComponent(btn_clearData)
-                .addGap(69, 69, 69))
+                .addGap(19, 19, 19)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_displayGrades)
+                    .addComponent(btn_addMarks, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_addStudent)
+                    .addComponent(btn_findAverageSprcificStudent)
+                    .addComponent(btn_findAverageEntireClass)
+                    .addComponent(btn_displayNames, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
+                .addComponent(display, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(btn_addStudent)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_addMarks, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(126, 126, 126)
-                .addComponent(btn_displayNames, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_clearData)
+                .addGap(23, 23, 23))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(368, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_addMarks, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn_addStudent, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn_displayNames, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_displayGrades)
-                    .addComponent(btn_findAverageSprcificStudent)
-                    .addComponent(btn_findAverageEntireClass)
-                    .addComponent(btn_clearData))
-                .addGap(33, 33, 33))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(display)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_clearData)
+                        .addGap(26, 26, 26))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_addStudent)
+                        .addGap(33, 33, 33)
+                        .addComponent(btn_addMarks)
+                        .addGap(29, 29, 29)
+                        .addComponent(btn_displayNames)
+                        .addGap(30, 30, 30)
+                        .addComponent(btn_displayGrades)
+                        .addGap(31, 31, 31)
+                        .addComponent(btn_findAverageSprcificStudent)
+                        .addGap(29, 29, 29)
+                        .addComponent(btn_findAverageEntireClass)
+                        .addContainerGap(80, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -119,8 +132,11 @@ public class StudentGradeManagementSystem extends javax.swing.JFrame {
 
     private void btn_addStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addStudentActionPerformed
         // TODO add your handling code here:
+        String names[]=new String[4];
+        for(int i=0;i<4;i++){
         String name = JOptionPane.showInputDialog("Enter student name");
-        
+        display.setText("Student "+name+" added");
+        }
     }//GEN-LAST:event_btn_addStudentActionPerformed
 
     /**
@@ -166,6 +182,7 @@ public class StudentGradeManagementSystem extends javax.swing.JFrame {
     private javax.swing.JButton btn_displayNames;
     private javax.swing.JButton btn_findAverageEntireClass;
     private javax.swing.JButton btn_findAverageSprcificStudent;
+    private javax.swing.JTextField display;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
