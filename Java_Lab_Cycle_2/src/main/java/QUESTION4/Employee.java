@@ -6,7 +6,7 @@ package QUESTION4;
 
 /**
  *
- * @author 
+ * @author
  */
 //class Date{
 //       int date;
@@ -22,42 +22,54 @@ package QUESTION4;
 //        return date + "/" + month + "/" + year;
 //    }
 //}
+import java.util.Scanner;
+
 class Employee {
+
     int id;
     String name;
     double salary;
     Date dob;
     Date doj;
 
-    public Employee(int id, String name, Date dob, Date doj,double salary) {
+    public Employee(int id, String name, Date dob, Date doj, double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
         this.dob = dob;
         this.doj = doj;
     }
-    class Date{
-       int date;
-       int month;
-       int year;
 
-        public Date(int date, int month, int year) {
-        this.date = date;
-        this.month = month;
-        this.year = year;
+    public static class Date {
+
+        int day, month, year;
+
+        public Date() {
         }
+        
+        public Date(int day, int month, int year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        
+        @Override
         public String toString() {
-        return date + "/" + month + "/" + year;
+            return day + "/" + month + "/" + year;
         }
+
     }
-    public double getSalary(){
+
+    public double getSalary() {
         return salary;
     }
-    public void display(){
-        System.out.println("Employee name: "+name);
-        System.out.println("Employee id: "+id); 
-        System.out.print("Employee date of birth: "+dob+" ");
-        System.out.print("Employee date of joining: "+doj+" ");
-        System.out.println("Salary: "+salary+" ");
+
+    public void display() {
+        System.out.println(" ");
+        System.out.println("Employee name: " + name);
+        System.out.println("Employee id: " + id);
+        System.out.println("Employee date of birth: " + dob);
+        System.out.println("Employee date of joining: " + doj);
+        System.out.println("Salary: " + salary + " ");
     }
 }

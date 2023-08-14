@@ -18,6 +18,7 @@ public class EmployeeMain {
         EmployeeList elist = new  EmployeeList(n);
         elist.readEmployeeDetails();
         elist.sort();
+        System.out.println("\nEmployees details in descending order of thier salry");
         elist.display();
     }
 }

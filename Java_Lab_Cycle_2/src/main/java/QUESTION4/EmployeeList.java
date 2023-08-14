@@ -33,19 +33,23 @@ class EmployeeList {
             System.out.print("Employee Name: ");
             scanner.nextLine(); // Consume the newline character
             String empName = scanner.nextLine();
-
-            System.out.println("Enter Date of Birth (dd mm yyyy): ");
-            int day = scanner.nextInt();
-            int month = scanner.nextInt();
-            int year = scanner.nextInt();
-            Date dob = new Date(day, month, year);
-
-            System.out.println("Enter Date of Joining (dd mm yyyy): ");
-            day = scanner.nextInt();
-            month = scanner.nextInt();
-            year = scanner.nextInt();
-            Date doj = new Date(day, month, year);
-
+            
+            System.out.println("Enter your date of birth (dd/mm/yyyy): " );
+            int day1 = scanner.nextInt();
+            int month1 = scanner.nextInt();
+            int year1 = scanner.nextInt();
+            Employee.Date dob = new Employee.Date(day1,month1,year1);
+            
+            System.out.println("Enter your date of joining(dd/mm/yyyy): " );
+            int day2 = scanner.nextInt();
+            int month2 = scanner.nextInt();
+            int year2 = scanner.nextInt();
+            Employee.Date doj = new Employee.Date(day2,month2,year2);
+//            Employee.Date date = new Employee.Date();
+//            String dob = date.getDOB(); 
+//                       
+//            String doj = date.getDOJ(); 
+            
             System.out.print("Salary: ");
             double salary = scanner.nextDouble();
             
